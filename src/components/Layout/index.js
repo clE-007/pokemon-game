@@ -2,8 +2,6 @@ import style from './style.module.css';
 
 const Layout = ({ id, title, descr, urlBg, colorBg }) => {
     const backgroundStyle = {background: urlBg ? `url(${urlBg})` : colorBg}
-    console.log('backgroundStyle======= ', backgroundStyle);
-    
 
     return (
         <section class={style.root} id={id} style={backgroundStyle}>
@@ -20,7 +18,6 @@ const Layout = ({ id, title, descr, urlBg, colorBg }) => {
                             <p>{descr}</p>
                         </div>
                     }
-                    
                 </article>
             </div>
         </section>
