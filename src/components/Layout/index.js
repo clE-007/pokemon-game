@@ -1,21 +1,21 @@
 import style from './style.module.css';
 
-const Layout = ({ id, title, descr, urlBg, colorBg }) => {
+const Layout = ({ id, title, urlBg, colorBg, children }) => {
     const backgroundStyle = {background: urlBg ? `url(${urlBg})` : colorBg}
 
     return (
-        <section class={style.root} id={id} style={backgroundStyle}>
-            <div class={style.wrapper}>
+        <section className={style.root} id={id} style={backgroundStyle}>
+            <div className={style.wrapper}>
                 <article>
                     {
-                        title && <div class={style.title}>
+                        title && <div className={style.title}>
                             <h3>{title}</h3>
-                            <span class={style.separator}></span>
+                            <span className={style.separator}></span>
                         </div>
                     }
                     {
-                        descr && <div class={`${style.desc} ${style.full}`}>
-                            <p>{descr}</p>
+                        children && <div className={`${style.desc} ${style.full}`}>
+                            {children}
                         </div>
                     }
                 </article>
