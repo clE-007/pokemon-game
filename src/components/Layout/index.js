@@ -1,20 +1,21 @@
-import style from './style.module.css';
+import s from './style.module.css';
+import cn from 'classnames';
 
 const Layout = ({ id, title, urlBg, colorBg, children }) => {
     const backgroundStyle = {background: urlBg ? `url(${urlBg})` : colorBg}
 
     return (
-        <section className={style.root} id={id} style={backgroundStyle}>
-            <div className={style.wrapper}>
+        <section className={s.root} id={id} style={backgroundStyle}>
+            <div className={s.wrapper}>
                 <article>
                     {
-                        title && <div className={style.title}>
+                        title && <div className={s.title}>
                             <h3>{title}</h3>
-                            <span className={style.separator}></span>
+                            <span className={s.separator}></span>
                         </div>
                     }
                     {
-                        children && <div className={`${style.desc} ${style.full}`}>
+                        children && <div className={cn(s.desc, s.full)}>
                             {children}
                         </div>
                     }
