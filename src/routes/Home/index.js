@@ -7,9 +7,6 @@ import Bg1 from '../../assets/bg1.jpg'
 import Bg2 from '../../assets/bg2.jpg'
 import {dataPokemons} from '../../constants/dataPokemons';
 
-import './../../App.css';
-import MenuHeader from '../../components/MenuHeader';
-
 function HomePage({ onChangePage }) {
     const handleClickButton = (page) => {
         console.log('home page');
@@ -18,7 +15,6 @@ function HomePage({ onChangePage }) {
 
     return (
         <>
-        <MenuHeader />
         <Header
             title='This is title'
             descr='This is Description!'
